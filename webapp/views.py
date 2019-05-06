@@ -22,13 +22,12 @@ def home(request):
 def form(request):
     if request.method == 'POST':
         form = predictionForm(request.POST)
-        print('700000')
+#        print('700000')
         if form.is_valid():
-            print("a5eeran")
-            printD(form.cleaned_data)
+#            print("a5eeran")
             # root = produceTree()
             prediction = predict(None, form.cleaned_data)
-            print(form.cleaned_data) 
+            print("PREDICTIONNNNN", prediction)
             if (prediction == 1):
                 messages.success(request, "WIll pay")
                 return render(request, 'webapp/form.html', {'form': form})

@@ -1,5 +1,5 @@
 from django import forms
-#from django.contrib import messages
+from django.contrib import messages
 
 class predictionForm(forms.Form):
     NORM_recoveries = forms.DecimalField(widget=forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Recovery'}))
@@ -7,7 +7,6 @@ class predictionForm(forms.Form):
     NORM_int_rate = forms.DecimalField(widget=forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'interest rate'}))
     NORM_loan_amnt = forms.DecimalField(widget=forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'loan amount'}))
     NORM_dti = forms.DecimalField(widget=forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'debt to income'}))
-    NORM_mo_sin_il_acct = forms.DecimalField(widget=forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'mnths since oldest bank inst acct'}))
     NORM_total_rec_late_fee  = forms.DecimalField(widget=forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'late fees recieved'}))
     NORM_num_actv_rev_tl = forms.DecimalField(widget=forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'active revolving trades'}))
     NORM_total_rec_int = forms.DecimalField(widget=forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Total received interest'}))
@@ -39,15 +38,15 @@ class predictionForm(forms.Form):
     NORM_pct_tl_nvr_dlq    = forms.DecimalField(widget=forms.NumberInput(attrs={'class': 'form-control', 'placeholder': '% of trades never delinquent'}))
     NORM_acc_open_past_24mths    = forms.DecimalField(widget=forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'trades opened past 24 months'}))
 
-#    def form_invalid(self, form):
-#        response = super(predictionForm, self).form_valid(form)
-#        messages.info(request, "invalid")
-#        return response
-#
-#
-#    def form_valid(self, form):
-#         response = super(predictionForm, self).form_valid(form)
-#         messages.info(request, "submitted")
-#         return response
+    # def form_invalid(self, form):
+    #     response = super(predictionForm, self).form_valid(form)
+    #     messages.info(request, "invalid")
+    #     return response
+
+
+    # def form_valid(self, form):
+    #  	response = super(predictionForm, self).form_valid(form)
+    #  	messages.info(request, "submitted")
+    #  	return response
 
 	
